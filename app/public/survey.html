@@ -227,6 +227,14 @@
     <br>
     <br>
 
+        <option class="question11">
+            <select id="q-11>
+            <option value="1">1 strongly agree</option>
+            <option value="2">2</option>
+        </select>
+
+
+     </div>
     <button type="button" class="btn btn-primary" id="submit">Submit</button>
 
     <hr>
@@ -249,7 +257,12 @@
 
     });
 
-    $()
+    $("#submit").click(function () {
+
+        var sample = $("#q-11 :select").attr("value");
+        console.log(sample);
+
+    })
 </script>
 
 </body>
