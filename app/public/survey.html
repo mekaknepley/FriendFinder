@@ -290,24 +290,24 @@ $("#submit").click(function() {
 // grab the value for the key from the user input with Jquery
 
 // submit that whole object with an ajax call
-$("#submit").click(function() {
- var friends = {
-     name: $(“.chosen-select”).chosen();
-     photo:$(“.chosen-select”).chosen();
-    scores:$(“.chosen-select”).chosen();
-
- }
-
-    $.ajax({
-        type: "POST",
-        url: apiPath,
-        data: friends,
-       // data: JSON.stringify(newFriend),
-       // contentType: 'application/json',
-    }).done(function () {
-        $surveyForm[0].reset();
-    });
-});
+//$("#submit").click(function() {
+// var friends = {
+//     name: $(“.chosen-select”).chosen();
+//     photo:$(“.chosen-select”).chosen();
+//    scores:$(“.chosen-select”).chosen();
+//
+// }
+//
+//    $.ajax({
+//        type: "POST",
+//        url: apiPath,
+//        data: friends,
+//       // data: JSON.stringify(newFriend),
+//       // contentType: 'application/json',
+//    }).done(function () {
+//        $surveyForm[0].reset();
+//    });
+//});
 
 </script>
 
