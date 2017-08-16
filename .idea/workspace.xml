@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5e10f8b7-f146-4321-ad77-2c31cf87d213" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/data/friends.js" afterPath="$PROJECT_DIR$/app/data/friends.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/home.html" afterPath="$PROJECT_DIR$/app/public/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/survey.html" afterPath="$PROJECT_DIR$/app/public/survey.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -49,11 +47,10 @@
       <file leaf-file-name="survey.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/survey.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+            <state relative-caret-position="384">
+              <caret line="172" column="3" lean-forward="true" selection-start-line="172" selection-start-column="3" selection-end-line="172" selection-end-column="3" />
               <folding>
-                <element signature="n#style#0;n#i#0;n#div#0;n#h3#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#7124#7131#1" expanded="true" />
+                <element signature="e#7096#7103#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -270,12 +267,12 @@
       <updated>1502740472348</updated>
       <workItem from="1502740474396" duration="5661000" />
       <workItem from="1502804235002" duration="1050000" />
-      <workItem from="1502805531318" duration="33465000" />
+      <workItem from="1502805531318" duration="33697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40176000" />
+    <option name="totallyTimeSpent" value="40408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,11 +488,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/survey.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+        <state relative-caret-position="384">
+          <caret line="172" column="3" lean-forward="true" selection-start-line="172" selection-start-column="3" selection-end-line="172" selection-end-column="3" />
           <folding>
-            <element signature="n#style#0;n#i#0;n#div#0;n#h3#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#7124#7131#1" expanded="true" />
+            <element signature="e#7096#7103#1" expanded="true" />
           </folding>
         </state>
       </provider>
