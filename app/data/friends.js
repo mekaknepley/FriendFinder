@@ -25,7 +25,7 @@ var friendsArray = [
 
     {
         "name":"Katie Gibson",
-        "photo":"./images/random-user-imageF22.jpg",
+        "photo":"http://www.designskilz.com/random-users/images/imageF29.jpg",
         "scores":[
             5,
             1,
@@ -42,7 +42,7 @@ var friendsArray = [
 
     {
         "name":"Anthony Collins",
-        "photo":"./images/random-user-imageM45.jpg",
+        "photo":"http://www.designskilz.com/random-users/images/imageF29.jpg",
         "scores":[
             3,
             1,
@@ -59,7 +59,7 @@ var friendsArray = [
 
     {
         "name":"Megan Johnson",
-        "photo":"./images/random-user-imageF29.jpg",
+        "photo":"http://www.designskilz.com/random-users/images/imageF29.jpg",
         "scores":[
             1,
             2,
@@ -76,7 +76,7 @@ var friendsArray = [
 
     {
         "name":"Tyler Davis",
-        "photo":"./images/random-user-imageM19.jpg",
+        "photo":"http://www.designskilz.com/random-users/images/imageF29.jpg",
         "scores":[
             2,
             1,
