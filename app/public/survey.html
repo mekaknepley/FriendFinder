@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -155,16 +158,17 @@
         <br>
     <br>
 
-            <select id="q-11">
-                <option value="1">1 strongly agree</option>
-                <option value="2">2</option>
-            </select>
+            <!--<select id="q-11">-->
+                <!--<option value="1">1 strongly agree</option>-->
+                <!--<option value="2">2</option>-->
+            <!--</select>-->
 
-
+<div>
     <button type="button" class="btn btn-primary" id="submit">Submit</button>
 
     <hr>
 </div>
+
 <p>
     <a href="/api/friends">API Friends List</a>
     |
@@ -175,23 +179,108 @@
 </div>
 </div>
 
+<!-- Modal -->
+<div id="resultsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title"><strong>Best Match</strong></h2>
+            </div>
+            <div class="modal-body">
+                <h2 id="matchName"></h2>
+                <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
 
 <script>
-    $(".dropdown-menu li a").click(function(){
-        $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
-        $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+//    $(".dropdown-menu li a").click(function(){
+//        $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+//        $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+//
+//    });
+//
+//    $("#submit").click(function () {
+//
+//        var sample = $("#q-11 :selected").attr("value");
+//        console.log(sample);
+//
+//    })
+//    var results = [
+//        "name" =
+//    ]
+// Capture the form inputs
+$("#submit").on("click", function(){
 
-    });
+    // Form validation
+    function validateForm() {
+        var isValid = true;
+        $('.form-control').each(function() {
+            if ( $(this).val() === '' )
+                isValid = false;
+        });
 
-    $("#submit").click(function () {
+        $('.chosen-select').each(function() {
 
-        var sample = $("#q-11 :selected").attr("value");
-        console.log(sample);
+            if( $(this).val() === "")
+                isValid = false
+        })
+        return isValid;
+    }
 
-    })
-    var results = [
-        "name" =
-    ]
+    // If all required fields are filled
+    if (validateForm() == true)
+    {
+        // Create an object for the user's data
+        var userData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+        }
+
+        // Grab the URL of the website
+        var currentURL = window.location.origin;
+
+        // AJAX post the data to the friends API.
+        $.post(currentURL + "/api/friends", userData, function(data){
+
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+            $("#matchName").text(data.name);
+            $('#matchImg').attr("src", data.photo);
+
+            // Show the modal with the best match
+            $("#resultsModal").modal('toggle');
+
+        });
+    }
+    else
+    {
+        alert("Please fill out all fields before submitting!");
+    }
+
+    return false;
+});
+
+$("#submit").click(function() {
+
+    if(window.location.href.indexOf("#resultsModal") != -1) {
+        $("#resultsModal").modal('show');
+    }
+
+});
+
+
+
 </script>
 
 </body>
