@@ -25,7 +25,7 @@ var friendsArray = [
 
     {
         "name":"Katie Gibson",
-        "photo":"random-user-imageF22.jpg",
+        "photo":"images/random-user-imageF22.jpg",
         "scores":[
             5,
             1,
