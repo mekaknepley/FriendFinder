@@ -36,11 +36,35 @@ module.exports = function(app) {
     app.post("/api/friends", function(req, res) {
         // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
         // It will do this by sending out the value "true" have a table
-        if (friendListData.length < 10) {
-            friendListData.push(req.body);
-            res.json(true);
-            console.log(friendListData);
+
+        //console.log(req.body.name);
+        //console.log(req.body.photo);
+        //console.log(req.body.scores);
+        var bestFriendDifference = 0;
+        var bestFriend = {name: "", photo: ""};
+
+        for (var i = 0; i < friendListData.length; i++) {
+            var totalDifference = 0;
+
+            for (var j = 0; j < friendListData[i].scores.length; j++) {
+                totalDifference += Math.abs(req.body.scores[j] - friendListData[i].scores[j]);
+            }
+
+            if (i == 0 || totalDifference < bestFriendDifference) {
+                bestFriendDifference = totalDifference;
+                bestFriend.name = friendListData[i].name;
+                bestFriend.photo = friendListData[i].photo;
+            }
         }
+
+        friendListData.push(req.body);
+
+        //console.log(bestFriendName);
+        //console.log(bestFriendPhoto);
+
+        res.json(bestFriend);
+        //console.log(friendListData);
+
 
     });
 
