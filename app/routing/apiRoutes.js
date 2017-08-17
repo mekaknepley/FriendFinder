@@ -48,6 +48,7 @@ module.exports = function(app) {
 
             for (var j = 0; j < friendListData[i].scores.length; j++) {
                 totalDifference += Math.abs(req.body.scores[j] - friendListData[i].scores[j]);
+
             }
 
             if (i == 0 || totalDifference < bestFriendDifference) {
@@ -61,6 +62,9 @@ module.exports = function(app) {
 
         //console.log(bestFriendName);
         //console.log(bestFriendPhoto);
+
+//console.log(req.body);
+//console.log(bestFriend);
 
         res.json(bestFriend);
         //console.log(friendListData);
