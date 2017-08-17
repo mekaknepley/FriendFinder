@@ -12,13 +12,13 @@ var friendsArray = [
         "scores":[
             5,
             1,
+            2,
             4,
-            4,
-            5,
+            2,
             1,
             2,
-            5,
-            4,
+            2,
+            2,
             1
         ]
     },
@@ -28,12 +28,12 @@ var friendsArray = [
         "photo":"http://www.designskilz.com/random-users/images/imageF29.jpg",
         "scores":[
             5,
-            1,
-            2,
+            4,
+            4,
             3,
             5,
             5,
-            2,
+            4,
             5,
             1,
             4
@@ -44,16 +44,16 @@ var friendsArray = [
         "name":"Anthony Collins",
         "photo":"http://www.designskilz.com/random-users/images/imageM10.jpg",
         "scores":[
-            3,
-            1,
-            4,
             5,
-            3,
-            2,
-            2,
             5,
-            1,
-            1
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
         ]
     },
 
@@ -63,10 +63,10 @@ var friendsArray = [
         "scores":[
             1,
             2,
-            4,
+            2,
             5,
-            3,
-            5,
+            2,
+            2,
             2,
             5,
             5,
@@ -78,32 +78,32 @@ var friendsArray = [
         "name":"Tyler Davis",
         "photo":"http://www.designskilz.com/random-users/images/imageM8.jpg",
         "scores":[
-            2,
-            1,
-            4,
-            4,
+            3,
             3,
             2,
+            3,
+            3,
+            3,
             2,
-            5,
-            4,
-            4
+            3,
+            3,
+            3
         ]
     },
 
     {
-        "name":"Megan Johnson",
+        "name":"Jackie Todd",
         "photo":"http://www.designskilz.com/random-users/images/imageF48.jpg",
         "scores":[
             1,
-            2,
-            4,
-            5,
-            3,
-            5,
-            2,
-            5,
-            5,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
             1
         ]
     }
