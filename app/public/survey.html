@@ -48,10 +48,10 @@
     <hr>
     <h3>
         <h3><strong>Question 1</strong></h3>
-        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+        <h4>You think Joffrey was a bad king.</h4>
         <select data-placeholder="" class="chosen-select" id="q1">
             <option value=""></option>
-            <option value="1"selected="selected">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -59,11 +59,11 @@
         </select>
 
         <h3><strong>Question 2</strong></h3>
-        <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+        <h4>Jon Snow is the true King of the North.</h4>
         <select data-placeholder="" class="chosen-select" id="q2">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
-            <option value="2"selected="selected">2</option>
+            <option value="2" selected="selected">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
@@ -71,35 +71,35 @@
 
 
         <h3><strong>Question 3</strong></h3>
-        <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+        <h4>The White Walkers are the greatest threat to Westeros.</h4>
         <select data-placeholder="" class="chosen-select" id="q3">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5"selected="selected">5 (Strongly Agree)</option>
+            <option value="5" selected="selected">5 (Strongly Agree)</option>
         </select>
 
 
         <h3><strong>Question 4</strong></h3>
-        <h4>You rarely do something just out of sheer curiosity.</h4>
+        <h4>Trial by combat is the best way to judge a person.</h4>
         <select data-placeholder="" class="chosen-select" id="q4">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
-            <option value="3"selected="selected">3</option>
+            <option value="3" selected="selected">3</option>
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
 
         <h3><strong>Question 5</strong></h3>
-        <h4>People can rarely upset you.</h4>
+        <h4>The Many-Faced God should be revered.</h4>
         <select data-placeholder="" class="chosen-select" id="q5">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
-            <option value="2"selected="selected">2</option>
+            <option value="2" selected="selected">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
@@ -107,10 +107,10 @@
 
 
         <h3><strong>Question 6</strong></h3>
-        <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+        <h4>Dragons are the best seige weapon.</h4>
         <select data-placeholder="" class="chosen-select" id="q6">
             <option value=""></option>
-            <option value="1"selected="selected">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -119,21 +119,21 @@
 
 
         <h3><strong>Question 7</strong></h3>
-        <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+        <h4>Mining dragon glass is a great way to stay in shape.</h4>
         <select data-placeholder="" class="chosen-select" id="q7">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value="4"selected="selected">4</option>
+            <option value="4" selected="selected">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
         <h3><strong>Question 8</strong></h3>
-        <h4>You rarely get carried away by fantasies and ideas.</h4>
+        <h4>Holding the door for others is very important.</h4>
         <select data-placeholder="" class="chosen-select" id="q8">
             <option value=""></option>
-            <option value="1"selected="selected">1 (Strongly Disagree)</option>
+            <option value="1" selected="selected">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -141,7 +141,7 @@
         </select>
 
         <h3><strong>Question 9</strong></h3>
-        <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+        <h4>House Mormont is a great ally.</h4>
         <select data-placeholder="" class="chosen-select" id="q9">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -152,7 +152,7 @@
         </select>
 
         <h3><strong>Question 10</strong></h3>
-        <h4>You feel more energetic after spending time with a group of people.</h4>
+        <h4>Dragon Skin is an incurable disease.</h4>
         <select data-placeholder="" class="chosen-select" id="q10">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -209,15 +209,6 @@
 
 <script>
 
-//    $("#submit").click(function () {
-//
-//        var sample = $("#q-11 :selected").attr("value");
-//        console.log(sample);
-//
-//    })
-//    var results = [
-//        "name" =
-//    ]
 // Capture the form inputs
 $("#submit").on("click", function(){
 
@@ -225,14 +216,16 @@ $("#submit").on("click", function(){
     function validateForm() {
         var isValid = true;
         $('.form-control').each(function() {
-            if ( $(this).val() === '' )
+            if ( $(this).val() === '' ) {
                 isValid = false;
+            }
         });
 
         $('.chosen-select').each(function() {
 
-            if( $(this).val() === "")
+            if( $(this).val() === "") {
                 isValid = false
+            }
         })
         return isValid;
     }
@@ -277,35 +270,6 @@ $("#submit").click(function() {
     }
 
 });
-// Now, on submit, create an object
-
-// create an object and give it a variable name
-
-// inside the object, have 3 keys (name, photo, scores)
-
-// grab the value for the key from the user input with Jquery
-
-// submit that whole object with an ajax call
-// how the images show up on the survey page? // is my images linked correctly?
-
-//$("#submit").click(function() {
-// var friends = {
-//     name: $(“.chosen-select”).chosen();
-//     photo:$(“.chosen-select”).chosen();
-//    scores:$(“.chosen-select”).chosen();
-//
-// }
-//
-//    $.ajax({
-//        type: "POST",
-//        url: apiPath,
-//        data: friends,
-//       // data: JSON.stringify(newFriend),
-//       // contentType: 'application/json',
-//    }).done(function () {
-//        $surveyForm[0].reset();
-//    });
-//});
 
 </script>
 
