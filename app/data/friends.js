@@ -75,7 +75,7 @@ var friendsArray = [
     },
 
     {
-        "name":"Tyler Davis",
+        "name":"Tyler M Davis",
         "photo":"http://www.designskilz.com/random-users/images/imageM8.jpg",
         "scores":[
             3,
